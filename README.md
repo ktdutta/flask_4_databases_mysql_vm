@@ -14,34 +14,34 @@ Make sure the proper inbound port rules are selected. As we are using MySQL it i
 ### Installing MySQL on Created VM 
 
 First we logged into the virtual machine we created on Azure using the following command
-'''ssh username@ip address'''
+```ssh username@ip address```
 
 
 Then we update the operating system  
-''' sudo apt-get update '''
+```sudo apt-get update```
 
 Following the updates we install 2 pieces of software required to run MySQL
-''' sudo apt install mysql-client mysql-server '''
+```sudo apt install mysql-client mysql-server```
 
 Open up mysql with the following command
-'''sudo mysql'''
+```sudo mysql```
 
 <img width="959" alt="Screenshot 2023-12-12 at 09 44 52" src="https://github.com/ktdutta/flask_4_databases_mysql_vm/assets/141374153/55d9a906-7b4a-4cba-be95-575efa988f5d">
 
 Create a username and password for MySQL Workbench connection
-'''create user 'keerthana'@'%' identified by 'keerthana2023';'''
+```create user 'keerthana'@'%' identified by 'keerthana2023';```
 
 Update privileges/user permissions
-'''grant all privileges on *.* to ‘keerthana’@’%’ with grant option;'''
+```grant all privileges on *.* to ‘keerthana’@’%’ with grant option;```
 
 Go into the configuration file to enable additional privileges which would allow any computer to connect by changing the binding address to 0.0.0.0. Then you must run a reset command before attempting to connect the virtual machine to MySQL workbench. 
 
 ### 2 Table Database Creation
 
-'''
+```
 create database emr;
 show databases;
-'''
+```
 <img width="654" alt="Screenshot 2023-12-12 at 11 16 54" src="https://github.com/ktdutta/flask_4_databases_mysql_vm/assets/141374153/e741a532-b05b-4313-ac2f-44ab5d2dbaff">
 
 #### Creating 2 Tables 
