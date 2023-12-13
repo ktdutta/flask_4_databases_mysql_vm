@@ -53,3 +53,21 @@ show databases;
 After adding our new connection to MySQL Workbench, we can see that the database and two tables we created within the database called emr are present in MySQL Workbench schema. 
 
 <img width="1037" alt="Screenshot 2023-12-12 at 12 49 49" src="https://github.com/ktdutta/flask_4_databases_mysql_vm/assets/141374153/36c6b1de-4901-4687-aa23-a3e4b5009e26">
+
+## Integrate with Flask
+
+### Create New Flask Application 
+
+I created a new flask application using the base flask code from previous lectures. In order to make it more specific to this assignment I initialized a SQLAlchemy instance. To supplement the base code an index.html file was created as well in order to format the flask application. In this file I made additions in order to make the SQL tables in the emr database to be displayed in a box format to make it user friendly and visually appealing. 
+
+
+### Connect Flask Application and MySQL Workbench
+
+In order to allow the flask application to access the information on MySQL Workbench we must use SQLAlchemy. The connection between MySQL Workbench and the flask application is created using the code in the file ‘python_connection.py’. 
+
+ 
+### Working Application 
+
+After running the application we get this electronic medical record demo web page!
+
+<img width="1342" alt="Screenshot 2023-12-13 at 17 21 52" src="https://github.com/ktdutta/flask_4_databases_mysql_vm/assets/141374153/bba63ca0-ff8d-4899-9e80-d5371c84dc9b">
